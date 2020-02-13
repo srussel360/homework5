@@ -226,6 +226,11 @@ Keyframes for animation*/
     align-content: center;
   }
 
+  .nav_img nav{
+    display: flex;
+    align-content: center;
+  }
+
   .nav_links{
     display: flex;
     flex-direction: row;
