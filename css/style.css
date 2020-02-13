@@ -71,19 +71,19 @@ Keyframes for animation*/
   }
 } 
 
+#logo{
+  animation: logo_wiggle 3s 1;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; */
+
+}
+
 @media screen and (prefers-reduced-motion: reduce){
   #logo {
     animation: none;
   }
-}
-
-#logo{
-  animation: logo_wiggle 3s 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-
 }
 
 /* Cards! */
@@ -159,7 +159,7 @@ Keyframes for animation*/
 
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
 }
 
 .gallery > img{
@@ -169,28 +169,20 @@ Keyframes for animation*/
 }
 
 /* Navbar */
-.nav_img {
-  
+header{
   background: #fff;
   border-bottom: 3px solid #50C7C7;
-  /* display: flex; 
-  justify-content: space-between; */
-}
-
-.nav_img img #logo{
-  flex-direction: row;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 
 .nav_links{
  
   list-style: none;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .nav_item a{
@@ -205,6 +197,7 @@ Keyframes for animation*/
           text-decoration-style: dotted;
 }
 
+
 @media screen and (min-width: 850px){
 
   /* Cards! */
@@ -218,30 +211,18 @@ Keyframes for animation*/
   }
 
   /* Navbar */
-
-/* 
-  .about .nav_img{
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-  } */
   
-  .nav_img {
-    display: flex; 
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  .nav_img nav{
+  
+  header{
     display: flex;
-    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .nav_links{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
   }
 
   .nav_item a{
