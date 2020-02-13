@@ -177,6 +177,12 @@ Keyframes for animation*/
   justify-content: space-between; */
 }
 
+.nav_img img #logo{
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
 .nav_links{
  
   list-style: none;
