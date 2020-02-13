@@ -54,29 +54,25 @@ footer{
 Keyframes for animation*/
 
 @-webkit-keyframes logo_wiggle{
-  0%{
+  from{
     width: 25px;
   }
-  100%{
+  to{
     width: 420px;
   }
 }
 
 @keyframes logo_wiggle{
-  0%{
+  from{
     width: 25px;
   }
-  100%{
+  to{
     width: 420px;
   }
 } 
 
 #logo{
   animation: logo_wiggle 3s 1;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; */
 
 }
 
@@ -233,12 +229,16 @@ header{
 
 @media print { 
   
+  body{
+    background-image: none;
+  }
+
   .card {
     flex-basis: 200px;
   }
 
   .pricing{
-    background-image: none;
+    align-items: flex-start;
   }
 
   .gallery{
