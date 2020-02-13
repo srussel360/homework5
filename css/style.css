@@ -173,7 +173,8 @@ Keyframes for animation*/
   
   background: #fff;
   border-bottom: 3px solid #50C7C7;
-
+  /* display: flex; 
+  justify-content: space-between; */
 }
 
 .nav_links{
@@ -219,9 +220,11 @@ Keyframes for animation*/
     flex-wrap: wrap;
   } */
   
-#logo {
-  justify-content: flex-start;
-}
+  .nav_img {
+    display: flex; 
+    justify-content: space-between;
+    align-content: center;
+  }
 
   .nav_links{
     display: flex;
