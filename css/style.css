@@ -212,28 +212,26 @@ Keyframes for animation*/
 
   /* Navbar */
 
-
+/* 
   .about .nav_img{
-    display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
-  }
+  } */
   
 #logo {
   justify-content: flex-start;
 }
 
   .nav_links{
-    background-color: white;
+    display: flex;
     flex-direction: row;
-    /* justify-content: flex-end; */
-    margin-left: auto;
+    justify-content: flex-end;
+    align-content: center;
   }
 
   .nav_item a{
     padding: 10px;
-    justify-content: flex-end;
 
   }
 }
@@ -245,10 +243,15 @@ Keyframes for animation*/
   }
 
   .pricing{
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: blue;
+    background-image: none;
+  }
+
+  .gallery{
+    display:none;
+  }
+
+  h2:last-of-type{
+    display: none;
   }
 
 }
