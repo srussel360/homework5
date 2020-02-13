@@ -2,7 +2,7 @@ body{
   font-family: 'Raleway', sans-serif; /* Test for this*/
   margin: 0;
   padding: 0;
-  font-size: 16pt; /* test for this! Make all sizes em or rem */
+  font-size: 1em; /* test for this! Make all sizes em or rem; setting 16pt as the standard (1em) */
   background-image: url('../images/concrete_seamless.png');
 }
 
@@ -54,21 +54,45 @@ footer{
 Keyframes for animation*/
 
 @-webkit-keyframes logo_wiggle{
-
+  0%{
+    width: 25px;
+  }
+  100%{
+    width: 420px;
+  }
 }
 
 @keyframes logo_wiggle{
-
+  0%{
+    width: 25px;
+  }
+  100%{
+    width: 420px;
+  }
 } 
 
+@media screen and (prefers-reduced-motion: reduce){
+  #logo {
+    animation: none;
+  }
+}
+
 #logo{
-  
+  animation: logo_wiggle 3s 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
 }
 
 /* Cards! */
 .pricing{
     min-height: 500px;
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -77,6 +101,11 @@ Keyframes for animation*/
   background: #fff;
   border-radius: 7px;
   padding: 0 0 50px 0;
+
+  display: flex;
+  flex-basis: 400px;
+  flex-direction: column;
+
 }
 
 .card > header{
@@ -84,6 +113,10 @@ Keyframes for animation*/
   border: 2px solid #45ADAD;
   padding: 20px 0;
   border-radius: 7px 7px 0 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .card > ul{
@@ -123,6 +156,10 @@ Keyframes for animation*/
 .gallery{
   
   min-height: 600px;
+
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .gallery > img{
@@ -132,15 +169,21 @@ Keyframes for animation*/
 }
 
 /* Navbar */
-header{
+.nav_img {
   
   background: #fff;
   border-bottom: 3px solid #50C7C7;
+
 }
 
 .nav_links{
  
   list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav_item a{
@@ -159,7 +202,7 @@ header{
 
   /* Cards! */
   .card {
-    
+    flex-basis: 250px;
   }
 
   .card_big{
@@ -169,16 +212,29 @@ header{
 
   /* Navbar */
 
-  header{
-    
+
+  .about .nav_img{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
   }
+  
+#logo {
+  justify-content: flex-start;
+}
 
   .nav_links{
-    
+    background-color: white;
+    flex-direction: row;
+    /* justify-content: flex-end; */
+    margin-left: auto;
   }
 
   .nav_item a{
     padding: 10px;
+    justify-content: flex-end;
+
   }
 }
 
@@ -186,6 +242,13 @@ header{
   
   .card {
     flex-basis: 200px;
+  }
+
+  .pricing{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: blue;
   }
 
 }
